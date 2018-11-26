@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import {View, Text} from 'react-native';
 
+import Glass from './app/components/Glass';
+
 export default class Index extends Component {
 
   componentWillMount(){
@@ -14,7 +16,7 @@ export default class Index extends Component {
   render(){
     return (
       <View>
-        <Text>Halo</Text>
+        <Glass/>
       </View>
     )
   }
