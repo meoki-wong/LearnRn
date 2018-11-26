@@ -1,22 +1,25 @@
 import React,{Component} from 'react';
-import {View, Text} from 'react-native';
-
-import Glass from './app/components/Glass';
+import {View, Text, TouchableOpacity} from 'react-native';
 
 export default class Index extends Component {
 
-  componentWillMount(){
-    console.log('Component Will Mount');
-  }
-
-  componentDidMount(){
-    console.log('Component Did Mount');
+  handleClick(i){
+    console.log('Nama saya '+i.nama+' asal '+i.asal);
   }
 
   render(){
+
+    const profil = {
+      nama: 'Arief Yusron',
+      asal: 'Sumenep'
+    }
+
     return (
       <View>
-        <Glass/>
+        <Text>Please Click</Text>
+        <TouchableOpacity onPress={()=>this.handleClick(profil)}>
+          <Text>Click</Text>
+        </TouchableOpacity>
       </View>
     )
   }
