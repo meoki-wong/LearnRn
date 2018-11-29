@@ -4,7 +4,7 @@ import {View, Text, TouchableOpacity} from 'react-native';
 export default class Index extends Component {
 
   handleClick(i){
-    console.log('Nama saya '+i.nama+' asal '+i.asal);
+    alert('Halo '+i.nama);
   }
 
   render(){
