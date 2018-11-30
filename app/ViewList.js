@@ -1,8 +1,34 @@
 import React,{Component} from 'react';
-import { ListItem, Text } from 'native-base';
+import { Image } from 'react-native';
+import { Header, Left, Body, Right, Title, Text, Icon, Card, CardItem, Thumbnail } from 'native-base';
 
 export default ViewList = (props) => (
-    <ListItem>
-        <Text>{props.data}</Text>
-    </ListItem>
+  <Card style={{marginLeft:0, marginRight:0, borderRadius:0}}>
+    <CardItem header style={{height:50}}>
+      <Left>
+        <Thumbnail small source={{uri: 'https://lh3.googleusercontent.com/-kCJD5dkof6Y/AAAAAAAAAAI/AAAAAAAAAJo/EnnmsZuhYss/s640-il/photo.jpg'}} />
+        <Body>
+          <Text>{props.data[0]}</Text>
+          <Text note>{props.data[1]}</Text>
+        </Body>
+      </Left>
+      <Right>
+        <Icon style={{fontSize:25, color:'black'}} name='more' />
+      </Right>
+    </CardItem>
+    <CardItem cardBody>
+      <Image
+        style={{height: 200, width: null, flex: 1}}
+        source={{uri: props.data[2]}}
+      />
+    </CardItem>
+    <CardItem footer>
+      <Left>
+        <Icon name='happy' />
+      </Left>
+      <Right>
+        <Text style={{color: 'grey'}}>{props.data[3]}</Text>
+      </Right>
+    </CardItem>
+  </Card>
 );
