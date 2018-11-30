@@ -1,16 +1,24 @@
-import React,{Component} from 'react';
-import {View,Text} from 'react-native';
+import React, { Component } from 'react';
+import { Container, Header, Content, List } from 'native-base';
 
-import MyList from './app/MyList';
+import ViewList from './app/ViewList';
 
-export default class Index extends Component {
+export default class ListExample extends Component {
+  data = [
+    'Arief',
+    'Yusron'
+  ]
 
-  render(){
+  render() {
     return (
-      <View>
-        <MyList/>
-      </View>
-    )
+      <Container>
+        <Header />
+        <Content>
+          <List>
+            {this.data.map((data,key)=> <ViewList key={key} data={data} />)}
+          </List>
+        </Content>
+      </Container>
+    );
   }
-
 }

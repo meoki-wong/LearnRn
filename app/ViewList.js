@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
-import {View, Text} from 'react-native';
+import { ListItem, Text } from 'native-base';
 
 export default ViewList = (props) => (
-    <Text>{props.data}</Text>
+    <ListItem>
+        <Text>{props.data}</Text>
+    </ListItem>
 );
