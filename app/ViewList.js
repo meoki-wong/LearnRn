@@ -8,8 +8,8 @@ export default ViewList = (props) => (
       <Left>
         <Thumbnail small source={{uri: 'https://lh3.googleusercontent.com/-kCJD5dkof6Y/AAAAAAAAAAI/AAAAAAAAAJo/EnnmsZuhYss/s640-il/photo.jpg'}} />
         <Body>
-          <Text>{props.data[0]}</Text>
-          <Text note>{props.data[1]}</Text>
+          <Text>{props.data.nama}</Text>
+          <Text note>{props.data.lokasi}</Text>
         </Body>
       </Left>
       <Right>
@@ -19,7 +19,7 @@ export default ViewList = (props) => (
     <CardItem cardBody>
       <Image
         style={{height: 200, width: null, flex: 1}}
-        source={{uri: props.data[2]}}
+        source={{uri: props.data.gambar}}
       />
     </CardItem>
     <CardItem footer>
@@ -27,7 +27,7 @@ export default ViewList = (props) => (
         <Icon name='happy' />
       </Left>
       <Right>
-        <Text style={{color: 'grey'}}>{props.data[3]}</Text>
+        <Text style={{color: 'grey'}}>{props.data.waktu}</Text>
       </Right>
     </CardItem>
   </Card>

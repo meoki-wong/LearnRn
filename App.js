@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Image} from 'react-native';
 import { Container, Header, Footer, Content, Left, Body, Right, Title, Text, Icon } from 'native-base';
 
 import ViewList from './app/ViewList';
@@ -7,9 +8,9 @@ import Foot from './app/Foot';
 export default class ListExample extends Component {
 
   data = [
-    ['Arief Yusron','Pulau Gili Labak','https://aishasnews.files.wordpress.com/2017/06/2-indonesiaexpat-biz.jpg','1 minute ago'],
-    ['Arief Yusron', 'Pantai 9','https://cdn.idntimes.com/content-images/community/2017/11/pondok-untuk-menginap-di-pantai-sembilan-image-source-1024x576-32303072105b16c23f1d552149bacc99.jpg','5 minutes ago'],
-    ['Arief Yusron', 'Pantai Kahuripan','https://visitsumenep.com/wp-content/uploads/2017/05/Pantai-Kahuripan-800x421.jpg','2 Days ago']
+    {nama: 'Arief Yusron',lokasi: 'Pulau Gili Labak',gambar: 'https://aishasnews.files.wordpress.com/2017/06/2-indonesiaexpat-biz.jpg',waktu: '2 minutes ago'},
+    {nama: 'Arief Yusron',lokasi: 'Pantai 9',gambar: 'https://cdn.idntimes.com/content-images/community/2017/11/pondok-untuk-menginap-di-pantai-sembilan-image-source-1024x576-32303072105b16c23f1d552149bacc99.jpg',waktu: '5 minutes ago'},
+    {nama: 'Arief Yusron',lokasi: 'Pantai Kahuripan',gambar: 'https://visitsumenep.com/wp-content/uploads/2017/05/Pantai-Kahuripan-800x421.jpg',waktu: '2 Days ago'}
   ]
 
   foot = [
